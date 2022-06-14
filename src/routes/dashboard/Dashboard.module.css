@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1300px;
+  min-height: 100vh;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.menuBar {
+  flex: 0 1 fit-content();
+  height: 95vh;
+  position: sticky;
+  top: 1rem;
+  align-self: flex-start;
+}
+
+.display {
+  flex: 1 0;
+}

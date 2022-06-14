@@ -1,0 +1,13 @@
+.container {
+  padding: 1rem 0 0 2rem;
+}
+
+.container h2 {
+  margin-bottom: 1rem;
+}
+
+.container main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

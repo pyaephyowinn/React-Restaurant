@@ -1,0 +1,61 @@
+.container {
+  min-height: 100%;
+  background: #519bd0;
+  border-radius: 24px;
+  color: #fefef8;
+}
+
+.logo {
+  line-height: 1.5em;
+  padding: 3rem 1.5rem;
+}
+
+.options li {
+  display: block;
+  padding: 0 0 1rem 1.5rem;
+}
+
+.option {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.option.active {
+  color: #fefef8;
+}
+
+.option span {
+  margin-right: 1rem;
+}
+
+@media (max-width: 992px) {
+  .container{
+    border-radius: 12px;
+  }
+  .logo{
+    font-size: 1.5rem;
+    padding: 3rem 1rem;
+  }
+  .options li {
+    padding: 0 0 1rem 1rem;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .container{
+    border-radius: 12px;
+  }
+  .logo{
+    font-size: 1rem;
+    padding: 3rem 0.5rem;
+  }
+  .options li {
+    padding: 0 0 1rem .5rem;
+  }
+  .option span {
+    margin: 0;
+    display: none;
+  }
+}

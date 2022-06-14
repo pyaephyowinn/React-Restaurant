@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.header nav {
+  margin-left: auto;
+}
+
+.header .btnNew {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+
+  /* background:  #4848db; */
+  background: linear-gradient(to right, #519bd0, #4848db);
+  color: #fefef8;
+  border-radius: 12px;
+}
+
+.iconPlus {
+  font-size: 1.5rem;
+}
