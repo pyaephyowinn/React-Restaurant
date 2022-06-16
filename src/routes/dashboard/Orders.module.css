@@ -1,0 +1,29 @@
+.container {
+  padding: 1rem;
+}
+
+.container header {
+  margin-bottom: 2rem;
+}
+
+.tableOrder {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.main tbody tr:nth-child(even) {
+  background: #ddd;
+}
+
+.tableOrder td, .tableOrder th {
+  text-align: center;
+  border: 1px solid #999;
+  /* border: none; */
+  padding: 0.5rem;
+}
+
+.tableOrder th {
+  background: #519bd0;
+  color: #ffffff;
+  border: none;
+}

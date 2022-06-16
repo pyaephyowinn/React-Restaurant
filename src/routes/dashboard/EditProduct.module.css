@@ -59,6 +59,7 @@
   color: #fff;
   background-color: #cc0000;
   border: none;
+  cursor: pointer;
 }
 
 .btnSave {
@@ -68,6 +69,7 @@
 }
 
 .btnSave:hover {
+  cursor: pointer;
   color: #519bd0;
   background: #fff;
   border: 1px solid #519bd0;

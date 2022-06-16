@@ -1,0 +1,89 @@
+.container {
+  padding: 1rem;
+}
+
+.container header {
+  margin-bottom: 2rem;
+}
+
+.card {
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: -3px 3px 3px 3px #ccc;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.date {
+  text-align: right;
+  padding: 1rem 0 1rem 0;
+}
+
+.date span.time {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.productBoxes {
+  margin-bottom: 2rem;
+}
+
+.product-box {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #333;
+}
+
+.product-box p {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+span.product-price {
+  margin-right: 1rem;
+  font-weight: 500;
+}
+
+.product-amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.totalAmount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.totalAmount span {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.contact {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact h3 {
+  margin-bottom: 1rem;
+}
+
+.contact ul {
+  list-style-type: none;
+}
+
+.actions button {
+  font-weight: 700;
+  width: 100%;
+  padding: 0.5rem 0;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(to right, #519bd0, #1717ff);
+  color: white;
+  cursor: pointer;
+}

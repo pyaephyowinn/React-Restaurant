@@ -13,11 +13,11 @@ const NewProduct = () => {
   const inputImageRef = useRef();
   const inputCategoryRef = useRef();
   const inputDescriptionRef = useRef();
-  
+
   const { sendRequest, data: pid, status } = useHttp(addProduct);
 
   useEffect(() => {
-    if(pid){
+    if (pid) {
       navigate(`/dashboard/products/${pid}`);
     }
   }, [navigate, pid]);
@@ -37,14 +37,17 @@ const NewProduct = () => {
       category: category.toLowerCase(),
       description,
     };
-    sendRequest(product)
+    sendRequest(product);
   };
 
+  const cancelHandler = () => {
+    navigate(-1)
+  }
 
   return (
     <main className={classes.container}>
       <h2>Add New Product</h2>
-      {status === 'sending' && <p>sending request</p>}
+      {status === "sending" && <p>sending request</p>}
 
       <form onSubmit={submitFormHandler}>
         <div className={classes["form-group"]}>
@@ -67,7 +70,16 @@ const NewProduct = () => {
           <label htmlFor="description">Description</label>
           <textarea ref={inputDescriptionRef} id="description"></textarea>
         </div>
-        <button className={classes.btnAdd}>Add Product</button>
+        <div className={classes.btnGroup}>
+          <button
+            onClick={cancelHandler}
+            type="button"
+            className={`${classes.btnCancel} ${classes.btn}`}
+          >
+            Cancel
+          </button>
+          <button className={`${classes.btnAdd} ${classes.btn}`}>Add Product</button>
+        </div>
       </form>
     </main>
   );

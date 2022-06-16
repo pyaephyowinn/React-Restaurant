@@ -41,7 +41,7 @@
   border-radius: 12px;
 }
 
-.btnAdd {
+/* .btnAdd {
   background: #519bd0;
   color: white;
   font-weight: 700;
@@ -50,4 +50,38 @@
   width: 100%;
   border: 1px solid #519bd0;
   border-radius: 12px;
+} */
+
+.btn {
+  font-weight: 700;
+  line-height: 2rem;
+  border-radius: 12px;
+  width: 45%;
+}
+
+.btnCancel {
+  margin: 0 5%;
+  background: #fff;
+  color: #cc0000;
+  border: 1px solid red;
+}
+
+.btnCancel:hover {
+  color: #fff;
+  background-color: #cc0000;
+  border: none;
+  cursor: pointer;
+}
+
+.btnAdd {
+  background: #519bd0;
+  color: white;
+  border: 1px solid #519bd0;
+}
+
+.btnSave:hover {
+  cursor: pointer;
+  color: #519bd0;
+  background: #fff;
+  border: 1px solid #519bd0;
 }

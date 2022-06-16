@@ -21,14 +21,14 @@ const EditProduct = () => {
     }
   }, [sendRequest, pid, product]);
 
-  if (!product) product = data;
-
-  const [pname, setPName] = useState(product.name);
-  const [price, setPrice] = useState(product.price);
+  if (!product && data) product = data;
+  
+  const [pname, setPName] = useState(product.name || "");
+  const [price, setPrice] = useState(product.price || 0);
   const [image, setIamge] = useState(product.image || "");
   const [category, setCategory] = useState(product.category || "");
   const [description, setDescription] = useState(product.description || "");
-
+  
   const nameChangeHandler = (e) => {
     setPName(e.target.value);
   };

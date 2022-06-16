@@ -1,8 +1,8 @@
-const url =
+const firebase_DOMAIN =
   "https://reactorderfood-5b0e4-default-rtdb.asia-southeast1.firebasedatabase.app";
 
 export const addProduct = async (product) => {
-  const res = await fetch(`${url}/products.json`, {
+  const res = await fetch(`${firebase_DOMAIN}/products.json`, {
     method: "POST",
     body: JSON.stringify(product),
     headers: {
@@ -19,7 +19,7 @@ export const addProduct = async (product) => {
 };
 
 export const getProducts = async () => {
-  const res = await fetch(`${url}/products.json`);
+  const res = await fetch(`${firebase_DOMAIN}/products.json`);
   const data = await res.json();
 
   if (!res.ok) {
@@ -38,7 +38,7 @@ export const getProducts = async () => {
 };
 
 export const getProduct = async (pid) => {
-  const res = await fetch(`${url}/products/${pid}.json`);
+  const res = await fetch(`${firebase_DOMAIN}/products/${pid}.json`);
   const data = await res.json();
 
   if (!res.ok) {
@@ -48,7 +48,7 @@ export const getProduct = async (pid) => {
 };
 
 export const updateProduct = async (updateProduct, pid) => {
-  const res = await fetch(`${url}/products/${pid}.json`, {
+  const res = await fetch(`${firebase_DOMAIN}/products/${pid}.json`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(updateProduct),
@@ -62,7 +62,7 @@ export const updateProduct = async (updateProduct, pid) => {
 };
 
 export const deleteProduct = async (pid) => {
-  const res = await fetch(`${url}/products/${pid}.json`, {
+  const res = await fetch(`${firebase_DOMAIN}/products/${pid}.json`, {
     method: "DELETE",
     headers: { "Content-Type": "application/json" },
   });
