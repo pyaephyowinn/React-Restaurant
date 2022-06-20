@@ -1,17 +1,26 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { getOrders } from "../../data";
 import classes from "./Orders.module.css";
+import { getOrders } from "../../api/OrderAPI";
+import useHttp from "../../hooks/use-http";
+import Notification from "../../components/UI/Notification";
 
-const Orders = () => {
-  const orders = getOrders();
+const Orders = ({ notification, close }) => {
+  const { sendRequest, data, status, error } = useHttp(getOrders);
 
-  orders.sort( (a,b) => {
-     if( a.status < b.status) {
-      return 1
-     }
-     return -1
-    })
+  useEffect(() => {
+    sendRequest();
+  }, [sendRequest]);
+
+  const orders = data || [];
+
+  orders.sort((a, b) => {
+    if (a.status < b.status) {
+      return 1;
+    }
+    return -1;
+  });
 
   let inc = 1;
 
@@ -20,7 +29,12 @@ const Orders = () => {
       <header>
         <h2>Orders</h2>
       </header>
+      {notification.length > 0 && (
+       <Notification text={notification} close={close} />
+      )}
       <main className={classes.main}>
+        {status === "sending" && <p>fetching data...</p>}
+        {error}
         <table className={classes.tableOrder}>
           <thead>
             <tr>

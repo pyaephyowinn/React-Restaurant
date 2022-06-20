@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { Navigate, Outlet, Route, Routes, } from "react-router-dom"
 
 import Menu from "../../components/UI/Menu"
@@ -12,6 +13,7 @@ import Orders from "./Orders"
 import OrderDetails from "./OrderDetails"
 
 const DashboardPage = () => {
+  const [noti, setNoti] = useState('')
   return (
     <div className={classes.container}>
       <div className={classes.menuBar}>
@@ -26,8 +28,8 @@ const DashboardPage = () => {
           <Route path="products/new" element={<NewProduct />} />
           <Route path="products/:pid/edit" element={<EditProduct />} />
 
-          <Route path="orders" element={<Orders />} />
-          <Route path="orders/:oid" element={<OrderDetails />} />
+          <Route path="orders" element={<Orders notification={noti} close={setNoti} />} />
+          <Route path="orders/:oid" element={<OrderDetails setNotification={setNoti} />} />
 
           <Route path="*" element={<h3>Page Not Found</h3>} />
         </Routes>

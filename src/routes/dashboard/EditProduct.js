@@ -79,6 +79,7 @@ const EditProduct = () => {
             value={pname}
             type="text"
             id="name"
+            required
           />
         </div>
         <div className={classes["form-group"]}>
@@ -89,6 +90,7 @@ const EditProduct = () => {
             type="number"
             id="price"
             step={0.01}
+            required
           />
         </div>
         <div className={classes["form-group"]}>
@@ -107,6 +109,7 @@ const EditProduct = () => {
             value={category}
             type="text"
             id="category"
+            required
           />
         </div>
         <div className={classes["form-group"]}>

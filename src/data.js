@@ -1,6 +1,6 @@
 const items = [
   {
-    id: 1,
+    id: 'p1',
     name: "item-1",
     price: 2000,
     description: "Blah blah blah blah",
@@ -9,7 +9,7 @@ const items = [
       "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
   },
   {
-    id: 2,
+    id: 'p2',
     name: "item-2",
     price: 1500,
     Description: "Blah blah blah blah",
@@ -18,11 +18,20 @@ const items = [
       "https://www.foodiesfeed.com/wp-content/uploads/2021/05/avocado-tree-819x1024.jpg.webp",
   },
   {
-    id: 3,
+    id: 'p',
     name: "item-3",
     price: 2500,
     Description: "Blah blah blah blah",
     category: "food",
+  },
+  {
+    id: 4,
+    name: "item-4",
+    price: 1500,
+    Description: "Blah blah blah blah",
+    category: "drink",
+    image:
+      "https://www.foodiesfeed.com/wp-content/uploads/2021/05/avocado-tree-819x1024.jpg.webp",
   },
 ];
 
@@ -34,13 +43,13 @@ const orders = [
         name: "Fresh Coconut!",
         price: 3500,
         quantity: 2,
-        pid: "p1",
+        id: "p1",
       },
       {
         name: "Fried Salmon",
         quantity: 1,
         price: 5000,
-        pid: "p2",
+        id: "p2",
       },
     ],
     amount: 12_000,
@@ -50,7 +59,7 @@ const orders = [
       address: "ygn",
       phone: "0123123",
     },
-    status: 'pending'
+    status: "pending",
   },
   {
     id: "o2",
@@ -59,13 +68,13 @@ const orders = [
         name: "Fresh Coconut!",
         price: 3500,
         quantity: 1,
-        pid: "p1",
+        id: "p1",
       },
       {
         name: "Tiramisu Sweet",
         quantity: 1,
         price: 5000,
-        pid: "p2",
+        id: "p2",
       },
     ],
     amount: 8000,
@@ -75,7 +84,7 @@ const orders = [
       address: "dawei",
       phone: "0123123",
     },
-    status: 'completed'
+    status: "completed",
   },
   {
     id: "o3",
@@ -84,13 +93,13 @@ const orders = [
         name: "Delicious Shakshouka",
         price: 7500,
         quantity: 2,
-        pid: "p1",
+        id: "p1",
       },
       {
         name: "Fried Salmon",
         quantity: 1,
         price: 5000,
-        pid: "p2",
+        id: "p2",
       },
     ],
     amount: 20_000,
@@ -100,7 +109,7 @@ const orders = [
       address: "ygn",
       phone: "0123123",
     },
-    status: 'pending'
+    status: "pending",
   },
   {
     id: "o4",
@@ -109,13 +118,13 @@ const orders = [
         name: "Delicious Shakshouka",
         price: 7500,
         quantity: 2,
-        pid: "p1",
+        id: "p1",
       },
       {
         name: "Fried Salmon",
         quantity: 1,
         price: 5000,
-        pid: "p2",
+        id: "p2",
       },
     ],
     amount: 20_000,
@@ -125,7 +134,7 @@ const orders = [
       address: "ygn",
       phone: "0123123",
     },
-    status: 'completed'
+    status: "completed",
   },
 ];
 

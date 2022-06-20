@@ -44,6 +44,8 @@ export const getProduct = async (pid) => {
   if (!res.ok) {
     throw new Error(data.message || "Could not fetch Product");
   }
+
+  if(!data) return -1
   return { id: pid, ...data };
 };
 

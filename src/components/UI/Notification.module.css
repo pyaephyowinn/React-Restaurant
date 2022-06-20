@@ -1,0 +1,15 @@
+.container {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background: #FFCC00;
+}
+
+.container span {
+  flex-grow: 0;
+  flex-basis: fit-content;
+  font-size: 1.2rem;
+
+  margin-left: 1rem;
+  cursor: pointer;
+}

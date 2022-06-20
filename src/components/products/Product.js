@@ -31,7 +31,6 @@ const Product = (props) => {
         <img src={image} alt="product name" />
         <p>
           {product.description || "No description was added!"}
-          {product.description}
         </p>
       </section>
       <div className={classes.btnGroup}>

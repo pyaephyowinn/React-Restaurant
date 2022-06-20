@@ -52,11 +52,11 @@ const NewProduct = () => {
       <form onSubmit={submitFormHandler}>
         <div className={classes["form-group"]}>
           <label htmlFor="name">Product Name</label>
-          <input ref={inputNameRef} type="text" id="name" />
+          <input ref={inputNameRef} type="text" id="name" required />
         </div>
         <div className={classes["form-group"]}>
           <label htmlFor="price">Price</label>
-          <input ref={inputPriceRef} type="number" id="price" step={0.01} />
+          <input ref={inputPriceRef} type="number" id="price" step={0.01} required />
         </div>
         <div className={classes["form-group"]}>
           <label htmlFor="image">Image Url</label>
@@ -64,7 +64,7 @@ const NewProduct = () => {
         </div>
         <div className={classes["form-group"]}>
           <label htmlFor="category">Category</label>
-          <input ref={inputCategoryRef} type="text" id="category" />
+          <input ref={inputCategoryRef} type="text" id="category" required />
         </div>
         <div className={classes["form-group"]}>
           <label htmlFor="description">Description</label>

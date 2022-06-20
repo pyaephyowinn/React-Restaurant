@@ -16,22 +16,16 @@ const ProductDetails = () => {
     sendRequest(pid);
   }, [sendRequest, pid]);
 
-  let isLoading;
-  if (status === "sending") {
-    isLoading = true;
-  }
-
-  if (status === "completed") {
-    isLoading = false;
-  }
-
   return (
     <div className={classes.container}>
 
-      {isLoading && <p>loading ...</p>}
+      {status === "sending" && <p>loading ...</p>}
+      {data === -1 && <p>Product is not found. It may be removed.</p>}
       {error && <p>{error}</p>}
 
-      <main>{!!data && <ProductDetailsComponent product={data} />}</main>
+      <main>
+        {status==='completed' && data !== -1 && <ProductDetailsComponent product={data} />}
+      </main>
     </div>
   );
 };
