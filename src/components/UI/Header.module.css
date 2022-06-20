@@ -1,9 +1,16 @@
 .header {
-  padding: 0.5rem 10rem;
+  width: 100vw;
+  background: #519bd0;
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #519bd0;
 }
 
 .header nav button {

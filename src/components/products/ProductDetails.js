@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import classes from "./ProductDetails.module.css";
 
 const ProductDetails = (props) => {
-  const removeProductHandler = () => {};
+  // const removeProductHandler = () => {};
 
   const { product } = props;
   const image = product.image
@@ -31,12 +31,12 @@ const ProductDetails = (props) => {
         >
           Edit
         </Link>
-        <button
+        {/* <button
           onClick={removeProductHandler}
           className={`${classes.btn} ${classes.btnDelete}`}
         >
           Remove
-        </button>
+        </button> */}
       </div>
     </div>
   );

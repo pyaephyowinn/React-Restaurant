@@ -44,16 +44,18 @@
 }
 
 .btnEdit {
+  width: 100%;
   text-decoration: none;
   color: #519bd0;
   border: 1px solid #519bd0;
+  border-radius: 100vmax;
 }
 
 .btnEdit:hover {
   background-color: #519bd0;
   color: #ffffff;
 }
-
+/* 
 .btnDelete {
   background-color: #cc0000;
   color: #ffffff;
@@ -64,4 +66,4 @@
   color: #cc0000;
   background-color: #ffffff;
   border: 1px solid #cc0000;
-}
+} */

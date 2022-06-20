@@ -6,16 +6,10 @@
   margin: auto;
 }
 
-.options {
-  position: sticky;
-  top: 1rem;
-}
-
 .options input {
   margin: 1rem 2rem;
   padding: 0.5rem 1rem;
   border-radius: 100vmax;
-  text-transform: capitalize;
 }
 
 .grid-container {

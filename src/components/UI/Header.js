@@ -1,16 +1,17 @@
-import { useSelector } from 'react-redux'
+import { useSelector } from "react-redux";
 
-import classes from './Header.module.css'
+import classes from "./Header.module.css";
 
 const Header = (props) => {
-  const quantity = useSelector(state => state.cart.quantity)
+  const quantity = useSelector((state) => state.cart.quantity);
 
   const cartOnClickHandler = () => {
-    props.setIsCartOpen(true)
-  }
+    props.setIsCartOpen(true);
+  };
 
   return (
     <header className={classes.header}>
+      <div className={classes.container}>
         <h1>React restaurant</h1>
         <nav>
           <button onClick={cartOnClickHandler}>
@@ -29,8 +30,9 @@ const Header = (props) => {
             <span className={classes.count}>{quantity}</span>
           </button>
         </nav>
-      </header>
-  )
-}
+      </div>
+    </header>
+  );
+};
 
-export default Header
+export default Header;
